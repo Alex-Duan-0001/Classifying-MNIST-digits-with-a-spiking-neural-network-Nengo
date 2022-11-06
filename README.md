@@ -17,7 +17,7 @@ Therefore, only three convolutional layer left and related average pooling layer
 
 2. LIF model /cite [Book: neural dynamics, Literature review: Training Spiking Deep Networks for Neuromorphic Hardware]
 
-From the book, the whole derivation process has been showed and we can get original equation fot the LIF model. 
+From the book, the whole derivation process has been showed and we can get original equation for the LIF model. 
 ![image](https://user-images.githubusercontent.com/60885586/200186786-55cba79e-e551-4246-ba9a-7dd84d0be8a1.png)
 ![image](https://user-images.githubusercontent.com/60885586/200186833-6148db39-194d-4a98-b440-f79e6c8167ad.png)
 ![image](https://user-images.githubusercontent.com/60885586/200186895-21c28b4c-986c-42c0-bb44-c0e34ce29fbc.png)
