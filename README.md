@@ -15,9 +15,20 @@ To make the ANN transferable to spiking neurons, a number of modifications are n
   
 Therefore, only three convolutional layer left and related average pooling layer. 
 
-2. LIF model 
+2. LIF model /cite [Book: neural dynamics, Literature review: Training Spiking Deep Networks for Neuromorphic Hardware]
+From the book, the whole derivation process has been showed and we can get original equation fot the LIF model. 
+![image](https://user-images.githubusercontent.com/60885586/200186786-55cba79e-e551-4246-ba9a-7dd84d0be8a1.png)
+![image](https://user-images.githubusercontent.com/60885586/200186833-6148db39-194d-4a98-b440-f79e6c8167ad.png)
+![image](https://user-images.githubusercontent.com/60885586/200186895-21c28b4c-986c-42c0-bb44-c0e34ce29fbc.png)
+
+From the literatue, the author just assume the R=1 and modified equation show below.
+![image](https://user-images.githubusercontent.com/60885586/200186562-95d94843-ac60-4352-a873-6ebe6768f961.png)
+
+![image](https://user-images.githubusercontent.com/60885586/200186450-218c0e8e-89da-43c0-a13b-66ec1baa02e8.png)
 
 3. LIF ANN
+
+From the explanation above, just change the RELU equation into the 
 
 4. LIF SNN
 
