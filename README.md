@@ -16,19 +16,23 @@ To make the ANN transferable to spiking neurons, a number of modifications are n
 Therefore, only three convolutional layer left and related average pooling layer. 
 
 2. LIF model /cite [Book: neural dynamics, Literature review: Training Spiking Deep Networks for Neuromorphic Hardware]
+
 From the book, the whole derivation process has been showed and we can get original equation fot the LIF model. 
 ![image](https://user-images.githubusercontent.com/60885586/200186786-55cba79e-e551-4246-ba9a-7dd84d0be8a1.png)
 ![image](https://user-images.githubusercontent.com/60885586/200186833-6148db39-194d-4a98-b440-f79e6c8167ad.png)
 ![image](https://user-images.githubusercontent.com/60885586/200186895-21c28b4c-986c-42c0-bb44-c0e34ce29fbc.png)
 
-From the literatue, the author just assume the R=1 and modified equation show below.
-![image](https://user-images.githubusercontent.com/60885586/200186562-95d94843-ac60-4352-a873-6ebe6768f961.png)
 
+
+From the literatue, the author just assume the R=1 and modified equation show below.
+
+![image](https://user-images.githubusercontent.com/60885586/200187911-a068c06c-b41f-484a-b2cc-30917e143a46.png)
 ![image](https://user-images.githubusercontent.com/60885586/200186450-218c0e8e-89da-43c0-a13b-66ec1baa02e8.png)
+![image](https://user-images.githubusercontent.com/60885586/200187949-5a1799e4-e2f1-4d6f-a3ac-3aa3144435df.png)
 
 3. LIF ANN
 
-From the explanation above, just change the RELU equation into the 
+From the explanation above, just change the RELU equation into the soft LIF rate equation (Equation2)
 
 4. LIF SNN
 
@@ -36,6 +40,10 @@ Finally, we convert the trained ANN to a SNN. The parameters in the spiking netw
 we will not address here.) Similarly, the average pooling operation can be written as a simple connection weight matrix, and this matrix can be multiplied by the convolutional weight matrix of the following layer to get direct connection weights between neurons.
 
 The only component of the network that changes when moving from the ANN to the SNN is the neurons themselves. The most significant change is that we replace the soft LIF rate model (Equation 2) with the LIF spiking model (Equation 1). We remove the additive Gaussian noise used in training. We also add post-synaptic filters to the neurons, which removes a significant portion of the high-frequency variation produced by spikes.
+
+5. Results: 
+
+![image](https://user-images.githubusercontent.com/60885586/200188449-4d8e582a-b624-4d2e-81f2-c1c5307af3c9.png)
 
 
 
